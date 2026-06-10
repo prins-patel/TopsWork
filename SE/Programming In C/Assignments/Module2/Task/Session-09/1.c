@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int dailySteps[7] = {5000, 6500, 7000, 8000, 7500, 9000, 10000};
+    int i;
+
+    printf("Daily Steps:\n");
+
+    for(i = 0; i < 7; i++)
+    {
+        printf("%d\n", dailySteps[i]);
+    }
+}
