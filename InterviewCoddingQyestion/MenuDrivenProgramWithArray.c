@@ -35,15 +35,16 @@ int main()
                 for(i = 0; i < n; i++)
                 {
                     for(j = i + 1; j < n; j++)
-                {
-                if(num[i] > num[j])
-                {
-                    temp = num[i];
-                    num[i] = num[j];
-                    num[j] = temp;
+                    {
+                        if(num[i] > num[j])
+                        {
+                            temp = num[i];
+                            num[i] = num[j];
+                            num[j] = temp;
+                        }
+                    }
                 }
-            }
-        }
+        
 
                 printf("Accending Order: ");
                 for(i = 0; i < n; i++)
@@ -89,6 +90,7 @@ int main()
 
             default:
                 printf("Invalid Choice");
+            
         }
     }
 }
