@@ -1,0 +1,15 @@
+Problem in C Version:
+
+1. Data and functions were separate. Tasks were stored in global arrays, and functions operated on them independently. This made the code harder to manage as the program grew.
+
+2. Fixed-size arrays and manual management. The C version used arrays with a maximum size (e.g., 5 tasks), requiring manual index handling and boundary checks.
+
+3. Adding new features required changes across multiple functions and arrays. For example, adding a priority level would require modifying global arrays, functions, and display logic separately.
+
+Solution in OOP C++ Version:
+
+1.Encapsulation: The Task class combines task data (title, isDone) with related methods (markDone(), display()). Everything related to a task is kept together.
+
+2.Dynamic storage: The TaskList class uses vector<Task>, which automatically grows as tasks are added, reducing manual memory and index management.
+
+3.Better maintainability and scalability: New properties (e.g., priority, dueDate) can be added directly to the Task class, and related behavior can be added as methods without affecting unrelated code.

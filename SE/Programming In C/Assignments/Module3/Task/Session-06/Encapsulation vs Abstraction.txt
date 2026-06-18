@@ -1,0 +1,9 @@
+Encapsulation = Protecting data
+Example: Instagram hides your password using private variables.
+Abstraction = Hiding complexity
+Example: Instagram lets you upload a photo with one button while hiding all the technical processes.
+
+Memory Trick:
+
+Encapsulation → "Hide Data"
+Abstraction → "Hide Details"
