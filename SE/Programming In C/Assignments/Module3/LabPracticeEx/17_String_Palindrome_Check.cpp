@@ -1,41 +1,98 @@
 // Write a C++ program to check if a given string is a palindrome (reads the same
 // forwards and backwards).
 
-
-
-
-#include <iostream>
-#include <string>
+#include<iostream>
+#include<string>
 using namespace std;
 
-int main() {
+class Palindrome
+{
     string str;
-    cout << "Enter a string: ";
+
+public:
+    // Constructor
+    Palindrome(string s)
+    {
+        str = s;
+    }
+
+    void checkPalindrome()
+    {
+        int start = 0;
+        int end = str.length() - 1;
+        bool isPalindrome = true;
+
+        while(start < end)
+        {
+            if(str[start] != str[end])
+            {
+                isPalindrome = false;
+                break;
+            }
+
+            start++;
+            end--;
+        }
+
+        if(isPalindrome)
+        {
+            cout << "Palindrome" << endl;
+        }
+        else
+        {
+            cout << "Not Palindrome" << endl;
+        }
+    }
+};
+
+int main()
+{
+    string str;
+
+    cout << "Enter a String: ";
     cin >> str;
 
-    int start = 0;
-    int end = str.length() - 1;
-    bool isPalindrome = true;
+    Palindrome p(str);   // Constructor Call
+    p.checkPalindrome();
 
-    while (start < end) {
-        if (str[start] != str[end]) {
-            isPalindrome = false;
-            break;
-        }
-        start++;
-        end--;
-    }
+}
 
-    if (isPalindrome)
-    {
-        cout << "Palindrome" << endl;
-    }
+
+
+
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main() {
+//     string str;
+//     cout << "Enter a string: ";
+//     cin >> str;
+
+//     int start = 0;
+//     int end = str.length() - 1;
+//     bool isPalindrome = true;
+
+//     while (start < end) {
+//         if (str[start] != str[end]) {
+//             isPalindrome = false;
+//             break;
+//         }
+//         start++;
+//         end--;
+//     }
+
+//     if (isPalindrome)
+//     {
+//         cout << "Palindrome" << endl;
+//     }
         
-    else
-    {
-        cout << "Not Palindrome" << endl;
-    }
+//     else
+//     {
+//         cout << "Not Palindrome" << endl;
+//     }
 
     
-}
+// }
 

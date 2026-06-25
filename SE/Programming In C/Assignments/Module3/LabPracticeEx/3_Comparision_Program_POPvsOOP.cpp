@@ -6,23 +6,37 @@
 #include<iostream>
 using namespace std;
 
-int area(int length, int breadth) {
-    return length * breadth;
-}
+class Rectangle
+{
+    int length, breadth;
+
+public:
+    // Constructor
+    Rectangle(int l, int b)
+    {
+        length = l;
+        breadth = b;
+    }
+
+    int area()
+    {
+        return length * breadth;
+    }
+};
 
 int main()
 {
-	int a;
-	int b;
-	cout << " Enter Your Lanth" << endl;
-	cin >> a;
-	cout << " Enter Your breadth" << endl;
-	cin >> b;
-	
-	int result = area(a,b);
-	
-	cout << "Area of Rectangle :" << result << endl;
-	
+    int a, b;
+
+    cout << "Enter Length: ";
+    cin >> a;
+
+    cout << "Enter Breadth: ";
+    cin >> b;
+
+    Rectangle r(a, b);   // Object creation + constructor call
+
+    cout << "Area of Rectangle: " << r.area() << endl;
 }
 
 

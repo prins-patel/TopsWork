@@ -4,16 +4,24 @@
 #include<iostream>
 using namespace std;
 
+class Sum
+{
+public:
+    Sum(int a, int b)
+    {
+        cout << "Sum is : " << a + b << endl;
+    }
+};
+
 int main()
 {
-	int a,b,sum;
-	
-	cout << "Enter Number 1 : " << endl;
-	cin >> a;
-	cout << "Enter Number 2 : " << endl;
-	cin >> b;
-	
-	sum = a + b;
-	
-	cout << "Sum is : " << sum << endl;
+    int n1, n2;
+
+    cout << "Enter Number 1 : ";
+    cin >> n1;
+
+    cout << "Enter Number 2 : ";
+    cin >> n2;
+
+    Sum s(n1, n2);
 }
