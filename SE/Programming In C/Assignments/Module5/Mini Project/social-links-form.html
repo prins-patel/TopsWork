@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Links Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f5f5f5;
+        font-family: Arial, sans-serif;
+      }
+
+      .form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        color: #e1306c;
+        margin-bottom: 25px;
+      }
+
+      /* Input with Icon */
+      .input-box {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .input-box i {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color: #666;
+        font-size: 20px;
+      }
+
+      .input-box input {
+        width: 100%;
+        padding: 12px 15px 12px 45px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      .input-box input:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 5px rgba(13, 110, 253, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h2>🔗 Add Social Links</h2>
+
+        <form>
+          <!-- Instagram -->
+          <div class="input-box">
+            <i class="bi bi-instagram"></i>
+            <input type="url" placeholder="Instagram Profile URL" required />
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="input-box">
+            <i class="bi bi-linkedin"></i>
+            <input type="url" placeholder="LinkedIn Profile URL" required />
+          </div>
+
+          <!-- GitHub -->
+          <div class="input-box">
+            <i class="bi bi-github"></i>
+            <input type="url" placeholder="GitHub Profile URL" required />
+          </div>
+
+          <!-- YouTube -->
+          <div class="input-box">
+            <i class="bi bi-youtube"></i>
+            <input type="url" placeholder="YouTube Channel URL" required />
+          </div>
+
+          <button class="btn btn-primary w-100">Save Links</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
