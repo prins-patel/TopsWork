@@ -1,0 +1,255 @@
+4. Class Designing – Gym Management System
+
+1 Introduction
+
+Class Designing ka purpose system ke different objects ko **Java classes** ke form me define karna hai.
+
+Gym Management System me main classes hain:
+
+1. Member
+2. Trainer
+3. WorkoutPlan
+4. Payment
+5. MemberDAO
+6. TrainerDAO
+7. WorkoutPlanDAO
+8. PaymentDAO
+9. DBConnection
+10. GymManagementApp
+
+-----------------------------------------------------------------------------
+
+
+2 Member Class
+
+Purpose: Member class gym members ki basic information store karti hai.
+
+* Main Attributes:
+
+ memberId
+ name
+ age
+ contact
+ planType
+ registrationDate
+
+Main Functions:
+
+ Get member details
+ Set/update member details
+ Store member information
+
+Database Table: members
+
+-----------------------------------------------------------------------------
+
+3 Trainer Class
+
+Purpose: Trainer class gym trainers ki information manage karti hai.
+
+Main Attributes:
+
+ trainerId
+ name
+ specialty
+ schedule
+
+Main Functions:
+
+ Get trainer details
+ Set/update trainer details
+ Store trainer information
+
+Database Table: trainers
+
+-----------------------------------------------------------------------------
+
+4 WorkoutPlan Class
+
+Purpose: WorkoutPlan class member ke workout plan ki information store karti hai.
+
+Main Attributes:
+
+ workoutId
+ memberId
+ workoutType
+ details
+ assignedDate
+
+Workout Types:
+
+ Cardio
+ Strength
+ Flexibility
+
+Main Functions:
+
+ Assign workout plan
+ Update workout plan
+ Display workout information
+
+Database Table: workout_plans
+
+-----------------------------------------------------------------------------
+
+
+5 Payment Class
+
+Purpose: Payment class member ke monthly payment details manage karti hai.
+
+Main Attributes:
+
+ paymentId
+ memberId
+ membershipFee
+ trainerFee
+ totalAmount
+ paymentDate
+ paymentStatus
+
+Main Function:
+
+Total payment calculate karna:
+
+**Total Amount = Membership Fee + Trainer Fee**
+
+Database Table: payments
+
+-----------------------------------------------------------------------------
+
+6 MemberDAO Class
+
+Purpose: MemberDAO class database ke saath member-related operations perform karti hai.
+
+Main Operations:
+
+ Add Member
+ Update Member
+ Delete Member
+ View Members
+ Search Member
+
+Database Table: members
+
+DAO ka full form Data Access Object hai.
+
+-----------------------------------------------------------------------------
+
+
+7 TrainerDAO Class
+
+Purpose: TrainerDAO class trainer-related database operations handle karti hai.
+
+Main Operations:
+
+ Add Trainer
+ View Trainers
+ Assign Trainer
+ View Trainer Assignments
+
+Database Tables: trainers, member_trainers
+
+-----------------------------------------------------------------------------
+
+
+8 WorkoutPlanDAO Class
+
+Purpose: WorkoutPlanDAO class workout plan ke database operations handle karti hai.
+
+Main Operations:
+
+ Assign Workout Plan
+ Update Workout Plan
+ View Workout History
+
+Database Table: workout_plans
+
+-----------------------------------------------------------------------------
+
+
+9 PaymentDAO Class
+
+Purpose: PaymentDAO class payment-related database operations handle karti hai.
+
+Main Operations:
+
+ Generate Monthly Payment
+ Store Payment
+ View Monthly Payments
+
+Database Table: payments
+
+-----------------------------------------------------------------------------
+
+
+10 DBConnection Class
+
+Purpose: DBConnection class Java application ko **MySQL database ke saath connect** karti hai.
+
+Main Function:
+
+Create database connection using JDBC.
+
+It uses:
+
+* JDBC
+* MySQL
+* Connection
+
+Ye class database connection ko centralize karti hai.
+
+-----------------------------------------------------------------------------
+
+
+11 GymManagementApp Class
+
+Purpose: GymManagementApp application ki main class hai.
+
+Ye user ko console menu provide karti hai.
+
+Main Menu:
+
+1. Add Member
+2. Update Member
+3. Delete Member
+4. View Members
+5. Search Member
+6. Add Trainer
+7. View Trainers
+8. Assign Trainer to Member
+9. View Trainer Assignments
+10. Assign Workout Plan
+11. Update Workout Plan
+12. View Workout History
+13. Generate Monthly Payment
+14. View Monthly Payments
+15. Exit
+
+Ye class user input leti hai aur required DAO methods ko call karti hai.
+
+-----------------------------------------------------------------------------
+
+12 Class Relationship
+
+System ka basic flow:
+
+GymManagementApp
+     ↓
+DAO Classes
+     ↓
+DBConnection
+     ↓
+MySQL Database
+
+
+Model classes database entities ko represent karti hain:
+
+**Member → members table**
+
+**Trainer → trainers table**
+
+**WorkoutPlan → workout_plans table**
+
+**Payment → payments table**
+
+-----------------------------------------------------------------------------

@@ -1,0 +1,197 @@
+# 3. Function Description – Gym Management System
+
+## 3.1 Add Member
+
+Is function ka use **new gym member add karne** ke liye hota hai.
+
+User se following details li jati hain:
+
+* Member Name
+* Age
+* Contact
+* Membership Plan
+* Registration Date
+
+Ye information MySQL database ke `members` table me store hoti hai.
+
+---
+
+## 3.2 Update Member 
+
+Is function ka use existing member ki information **update** karne ke liye hota hai.
+
+User Member ID ke through member ko find karta hai aur uski details update kar sakta hai.
+
+**Example:**
+Member ka contact number ya membership plan change karna.
+
+---
+
+## 3.3 Delete Member
+
+Is function ka use member record ko database se **delete** karne ke liye hota hai.
+
+User Member ID enter karta hai. Agar member available hai, to uska record delete ho jata hai.
+
+---
+
+## 3.4 View Members
+
+Is function se system me registered **all members ki list** display hoti hai.
+
+Displayed information:
+
+* Member ID
+* Name
+* Age
+* Contact
+* Membership Plan
+* Registration Date
+
+---
+
+## 3.5 Search Member
+
+Is function ka use specific member ko search karne ke liye hota hai.
+
+Member ko:
+
+* Member ID
+* Contact Number
+
+ke through search kiya ja sakta hai.
+
+---
+
+## 3.6 Add Trainer
+
+Is function ka use **new trainer add** karne ke liye hota hai.
+
+Trainer ki details:
+
+* Trainer Name
+* Specialty
+* Schedule
+
+database ke `trainers` table me store hoti hain.
+
+---
+
+## 3.7 View Trainers
+
+Is function se available trainers ki information display hoti hai.
+
+Information includes:
+
+* Trainer ID
+* Trainer Name
+* Specialty
+* Schedule
+
+---
+
+## 3.8 Assign Trainer to Member
+
+Is function ka use **trainer ko kisi member ke saath assign** karne ke liye hota hai.
+
+User:
+
+1. Member ID enter karta hai.
+2. Trainer ID enter karta hai.
+3. Assignment date enter/select hoti hai.
+
+Ye information `member_trainers` table me store hoti hai.
+
+---
+
+## 3.9 View Trainer Assignments
+
+Is function se pata chalta hai ki **kaunsa trainer kis member ko assigned hai**.
+
+System Member ID aur Trainer ID ke basis par assignments display karta hai.
+
+---
+
+## 3.10 Assign Workout Plan
+
+Is function ka use member ko **workout plan assign** karne ke liye hota hai.
+
+Workout types:
+
+* Cardio
+* Strength
+* Flexibility
+
+Workout details aur assigned date database me store hoti hai.
+
+---
+
+## 3.11 Update Workout Plan
+
+Is function se existing workout plan ko **update** kiya ja sakta hai.
+
+User workout record ko identify karke:
+
+* Workout Type
+* Workout Details
+
+update kar sakta hai.
+
+---
+
+## 3.12 View Workout History
+
+Is function se kisi member ke **assigned workout plans ka history** dekha ja sakta hai.
+
+System workout type, details aur assigned date display karta hai.
+
+---
+
+## 3.13 Generate Monthly Payment
+
+Is function ka use member ka **monthly payment calculate aur record** karne ke liye hota hai.
+
+Payment calculation:
+
+**Total Amount = Membership Fee + Trainer Fee**
+
+Payment details `payments` table me save hoti hain.
+
+---
+
+## 3.14 View Monthly Payments
+
+Is function se recorded monthly payments display kiye ja sakte hain.
+
+Information includes:
+
+* Payment ID
+* Member ID
+* Membership Fee
+* Trainer Fee
+* Total Amount
+* Payment Date
+* Payment Status
+
+---
+
+## 3.15 Database Connectivity
+
+Application **JDBC** ka use karke Java application ko MySQL database se connect karti hai.
+
+JDBC ke through system:
+
+* Insert data
+* Update data
+* Delete data
+* Retrieve data
+
+operations perform karta hai.
+
+---
+
+## 3.16 Exception Handling
+
+Application me invalid input aur database-related errors ko handle karne ke liye **Exception Handling** ka use kiya gaya hai.
+
+Isse user ko proper error message milta hai aur application suddenly terminate hone se bachti hai.

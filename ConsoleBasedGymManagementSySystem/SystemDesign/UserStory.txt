@@ -1,0 +1,112 @@
+User Story – Gym Management System
+
+
+Step 1.Member Management
+
+As a gym staff member,
+I want to add, update, delete and view member details,
+so that I can easily maintain gym member records.
+
+Member can:
+Add new member
+Update member information
+Delete member
+View all members
+Search member using Member ID or Contact
+
+Example:
+Agar koi new person gym join karta hai, staff uska name, age, contact, membership plan aur registration date system me add kar sakta hai.
+
+
+Step 2.Workout Plan Management
+
+As a gym staff member,
+I want to assign and update workout plans for members,
+so that each member can follow a suitable workout routine.
+
+System can:
+Assign workout plan
+Update workout plan
+Select workout type:
+Cardio
+Strength
+Flexibility
+View workout history
+
+Example:
+Agar member ko Strength training karni hai, trainer/staff uske account me Strength workout plan assign kar sakta hai.
+
+
+Step 3.Trainer Management
+
+As a gym staff member,
+I want to manage trainer details and assign trainers to members,
+so that members can get proper training support.
+
+Trainer Management includes:
+Add trainer
+View available trainers
+Store trainer specialty
+Store trainer schedule
+Assign trainer to member
+View trainer assignments
+
+Example:
+Agar kisi member ne Strength plan select kiya hai, to suitable trainer ko us member ke saath assign kiya ja sakta hai.
+
+
+Step 4.Payment Management
+
+As a gym staff member,
+I want to record monthly payments,
+so that I can track the payment status of each member.
+
+Payment includes:
+Membership Plan Fee
+Personal Trainer Fee
+Total Amount
+Payment Date
+Payment Status
+Total Payment:
+
+Total Amount = Membership Plan Fee + Trainer Fee
+
+Example:
+If Membership Fee = ₹2000
+and Trainer Fee = ₹1000
+
+Then:
+
+Total Amount = ₹3000
+
+
+Step 5.Database Management
+
+As a system,
+I want to store all important gym data in MySQL,
+so that data can be saved and retrieved whenever required.
+
+The Java application uses JDBC to:
+
+Connect with MySQL
+Insert data
+Update data
+Delete data
+Retrieve data
+
+
+Step 6.Exception Handling
+
+As a system,
+I want to handle invalid inputs and database errors,
+so that the application does not stop unexpectedly.
+
+For example:
+
+Invalid age
+Invalid member ID
+Wrong input type
+Database connection error
+Member not found
+
+The system displays a proper error message to the user.

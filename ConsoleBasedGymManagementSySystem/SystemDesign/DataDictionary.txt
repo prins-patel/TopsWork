@@ -1,0 +1,100 @@
+CONSOLE BASED GYM MANAGEMENT SYSTEM
+
+DATA DICTIONARY – TABLE DESIGN
+
+
+1 MEMBERS TABLE >>>Table Name: members
+
+Column Name          Data Type          Constraint              Purpose
+---------------------------------------------------------------------------
+member_id            INT                Primary Key,             Member ka unique ID
+                                        Auto Increment            
+
+name                 VARCHAR(100)       NOT NULL                 Member ka naam
+
+age                  INT                NOT NULL                 Member ki age
+
+contact              VARCHAR(15)        NOT NULL, UNIQUE         Member ka contact number
+
+plan_type            VARCHAR(50)        NOT NULL                 Membership plan type
+
+registration_date    DATE               NOT NULL                 Member ki registration date
+
+
+2 TRAINERS TABLE >>>Table Name: trainers
+
+Column Name          Data Type          Constraint              Purpose
+---------------------------------------------------------------------------
+trainer_id           INT                Primary Key,             Trainer ka unique ID
+                                        Auto Increment           
+
+name                 VARCHAR(100)       NOT NULL                 Trainer ka naam
+
+specialty            VARCHAR(100)       NOT NULL                 Trainer ki specialty
+
+schedule             VARCHAR(100)       NOT NULL                 Trainer ka schedule
+
+
+3 WORKOUT_PLANS TABLE >>>Table Name: workout_plans
+
+Column Name          Data Type          Constraint              Purpose
+---------------------------------------------------------------------------
+workout_id           INT                Primary Key,             Workout ka unique ID
+
+                                        Auto Increment           
+member_id            INT                Foreign Key              Workout kis member ka hai
+
+workout_type         VARCHAR(50)        NOT NULL                 Workout type(Cardio,Strength,Flexibility)
+
+details              VARCHAR(255)       NOT NULL                 Workout ki details
+
+assigned_date        DATE               NOT NULL                 Workout assign hone ki date
+
+
+1.4 MEMBER_TRAINERS TABLE >>>Table Name: member_trainers
+
+Column Name          Data Type          Constraint              Purpose
+---------------------------------------------------------------------------
+member_id            INT                Primary Key,
+                                        Foreign Key             Member ka ID
+
+trainer_id           INT                Foreign Key             Assigned trainer ka ID
+
+assigned_date        DATE               NOT NULL                Trainer assignment ki date
+                                                                  
+                                                                 
+
+1.5 PAYMENTS TABLE >>>Table Name: payments
+
+Column Name          Data Type          Constraint              Purpose
+---------------------------------------------------------------------------
+payment_id           INT                Primary Key,             Payment ka unique ID
+                                        Auto Increment           
+
+member_id            INT                Foreign Key              Payment kis member ka hai
+
+membership_fee       DECIMAL(10,2)      NOT NULL                 Membership fee    
+
+trainer_fee          DECIMAL(10,2)      NOT NULL                 Personal trainer fee
+                                                                 
+total_amount         DECIMAL(10,2)      NOT NULL                 Total payment amount
+                                                                  
+payment_date         DATE               NOT NULL                 Payment ki date                                                        
+payment_status       VARCHAR(20)        NOT NULL                 Payment ka status
+                                                                  
+
+
+DATABASE RELATIONSHIPS
+
+1. Members → Workout Plans
+   member_id ke through member aur workout plan connected hain.
+
+2. Members → Payments
+   member_id ke through member aur payment records connected hain.
+
+3. Members → Member Trainers
+   member_id ke through member aur trainer assignment connected hai.
+
+4. Trainers → Member Trainers
+   trainer_id ke through trainer aur member assignment connected hai.
+
